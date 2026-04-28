@@ -312,15 +312,27 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
   <button class="nb" onclick="showPanel('formulaires',this)">Formulaires & Liens</button>
   <button class="nb" onclick="showPanel('causeries',this)">Plan causeries SSE</button>
   <button class="nb" onclick="showPanel('planning',this)">Planning sécurité</button>
+  <button class="nb" onclick="showPanel('habilitations',this)">Habilitations</button>
   <button class="nb" onclick="showPanel('accueil',this)">Accueil & badges</button>
   <button class="nb" onclick="showPanel('ressources',this)">Ressources</button>
   <button class="nb" onclick="showPanel('organigramme',this)">Organigramme</button>
   <button class="nb" onclick="showPanel('dashboard-sse',this)">Dashboard SSE</button>
+  <button class="nb" onclick="showPanel('conduite',this)">Conduite à tenir</button>
   <button class="nb" onclick="showPanel('assistant',this)">Assistant IA</button>
 </div>
 
 <!-- ═══ PANEL : DASHBOARD ═══ -->
 <div id="panel-dashboard" class="panel active">
+<!-- BOUTON URGENCE -->
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DXwSXK3ZZEqPVJuiFsneXIngvhAIK5JLnCQbkCPeo-JUNUpLWE02TUE3OUFVUlFUQ05XR1g1WklKNi4u" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:var(--or);color:var(--wh);border-radius:10px;padding:1rem;margin-bottom:1.1rem;text-decoration:none;font-weight:700;font-size:14px;box-shadow:0 4px 12px rgba(231,69,20,.35);transition:.15s" onmouseover="this.style.background='#C23A10'" onmouseout="this.style.background='var(--or)'">
+  <span style="font-size:20px">🚨</span>
+  <div>
+    <div>SIGNALER UN ÉVÉNEMENT</div>
+    <div style="font-size:11px;font-weight:400;opacity:.9">Incident · Accident · Situation dangereuse · Presque-accident</div>
+  </div>
+  <span style="margin-left:auto;font-size:18px">→</span>
+</a>
+<!-- FIN BOUTON URGENCE -->
   <div class="alert-r">
     <div class="at">Alerte critique — remontée d'événements</div>
     <div class="ab">Aucune remontée depuis 27 jours (dernière : 20 mars 2026). Non-conformité MASE 2024 axe 4 — prévention & retour d'expérience. Action immédiate requise.</div>
@@ -346,10 +358,31 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
     <div class="bb" style="margin-bottom:0"><div class="bt"><span>Remontée événement</span><span style="color:var(--or);font-weight:700">Critique ✗</span></div><div class="btr"><div class="bf" style="width:3%;background:var(--or)"></div></div></div>
   </div>
   <div class="ev-s">
-    <div class="ev-cal"><div class="ec-d">24</div><div class="ec-m">AVRIL</div></div>
-    <div style="flex:1"><div class="ei-t">Journée Mondiale de la Sécurité</div><div class="ei-d">TotalEnergies Marketing Reunion · 10h00–15h00 · Gaëtan Telmon</div></div>
-    <div class="ev-j">J-8</div>
+    <div class="ev-cal"><div class="ec-d">1</div><div class="ec-m">MAI</div></div>
+    <div style="flex:1"><div class="ei-t">Fête du Travail</div><div class="ei-d">Journée de sensibilisation aux droits des travailleurs</div></div>
+    <div class="ev-j">J-3</div>
   </div>
+  <div class="sec">Consommation électrique atelier MDM</div>
+  <div class="card" style="margin-bottom:1.1rem">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem">
+      <div class="card-t" style="margin-bottom:0">Relevés bimestriels (kWh)</div>
+      <span class="pill pinfo">Dernier : fév. 2026 — 7 578 kWh</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:6px;margin-bottom:.5rem">
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Août 2024</div><div style="font-size:13px;font-weight:700">1 919</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Oct. 2024</div><div style="font-size:13px;font-weight:700">5 439</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Déc. 2024</div><div style="font-size:13px;font-weight:700">7 265</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Fév. 2025</div><div style="font-size:13px;font-weight:700">8 459</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Avr. 2025</div><div style="font-size:13px;font-weight:700">8 950</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Juin 2025</div><div style="font-size:13px;font-weight:700">5 269</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Août 2025</div><div style="font-size:13px;font-weight:700">5 461</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Oct. 2025</div><div style="font-size:13px;font-weight:700">6 737</div></div>
+      <div style="background:var(--gr-xl);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--gr-l)">Déc. 2025</div><div style="font-size:13px;font-weight:700">8 596</div></div>
+      <div style="background:var(--blue-l);border:1px solid var(--blue);border-radius:6px;padding:6px 8px;text-align:center"><div style="font-size:9px;color:var(--blue)">Fév. 2026</div><div style="font-size:13px;font-weight:700;color:var(--blue)">7 578</div></div>
+    </div>
+    <div style="font-size:10px;color:var(--gr-l)">Source : relevés bimestriels atelier MDM · À mettre à jour à chaque relevé</div>
+  </div>
+
   <div class="btn-gr">
     <button class="btn-g" onclick="goAI('Aide-moi à préparer le bilan QHSE complet pour la Journée Mondiale de la Sécurité du 24 avril 2026 chez TotalEnergies MDM')">Préparer bilan 24 avril →</button>
     <button class="btn-g" onclick="goAI('Rédige un message de relance urgent pour les remontées d\'événements MDM à envoyer à Bertrand Lucien et Boris Sorres')">Message relance remontées →</button>
@@ -388,7 +421,7 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
       <span class="pill pok">Actif · ~6 signées avril</span>
     </div>
     <div class="form-block-body">
-      <a class="lk-item form-sub" href="https://forms.office.com/Pages/ResponsePage.aspx?id=DXwSXK3ZZEqPVJuiFsneXIngvhAIK5JLnCQbkCPeo-JUMEVZQjcxVVhXVzBVQ0JLRjU1S1JXNklMNC4u" target="_blank">
+      <a class="lk-item form-sub" href="https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&FormId=DXwSXK3ZZEqPVJuiFsneXIxJRoZ_WPNCoyM29P21qf9UOUVLWUhBNDU4R0oySzIyNURRVzE0WEtYUy4u" target="_blank">
         <div class="lk-l"><span class="form-icon form-fill">✏️</span><div><div class="lk-t">Remplir le formulaire</div><div class="lk-s">Signature hebdomadaire · Le Lundi SSE</div></div></div>
         <span class="lk-arr">↗</span>
       </a>
@@ -470,7 +503,7 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
       <div class="lk-l"><div class="lk-dot" style="background:var(--or)"></div><div><div class="lk-t">MODOP — Analyse des risques chantiers</div><div class="lk-s">MODOP - Analyse des risques - MDM - Chantiers.xlsx</div></div></div>
       <div style="display:flex;align-items:center;gap:8px"><span class="pill pok">Disponible</span><span class="lk-arr">→</span></div>
     </a>
-    <a class="lk-item" href="#" onclick="showPanel('accueil',document.querySelectorAll('.nb')[4]);return false">
+    <a class="lk-item" href="#" onclick="showPanel('accueil',document.querySelectorAll('.nb')[5]);return false">
       <div class="lk-l"><div class="lk-dot" style="background:var(--blue)"></div><div><div class="lk-t">Suivi accueil sécurité & badges</div><div class="lk-s">Grand Port Maritime, Albioma, TotalEnergies — statuts par personne</div></div></div>
       <div style="display:flex;align-items:center;gap:8px"><span class="lk-arr">→</span></div>
     </a>
@@ -481,8 +514,8 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
 <div id="panel-causeries" class="panel">
   <div class="sec">Plan de diffusion — Le Lundi SSE</div>
   <div class="alert-g" style="padding:.7rem 1rem;border-radius:0 8px 8px 0;margin-bottom:1rem">
-    <div style="font-size:13px;font-weight:700;color:#1e8449;margin-bottom:2px">Causerie suivante — 20 avril 2026</div>
-    <div style="font-size:12px;color:var(--gr-l)">20/04 — Tri et élimination des déchets industriels <span style="color:var(--or);font-weight:700">· Produits chimiques et environnement</span></div>
+    <div style="font-size:13px;font-weight:700;color:#1e8449;margin-bottom:2px">Causerie suivante — 4 mai 2026</div>
+    <div style="font-size:12px;color:var(--gr-l)">04/05 — Préparer son intervention avec rigueur et anticipation <span style="color:var(--or);font-weight:700">· Sécurité sur les sites clients</span></div>
   </div>
   <div id="causerie-list"></div>
 </div>
@@ -492,6 +525,36 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
   <div class="sec">Journées nationales & internationales de sécurité — 2026</div>
   <div id="planning-list"></div>
 </div>
+
+<!-- ═══ PANEL : HABILITATIONS ═══ -->
+<div id="panel-habilitations" class="panel">
+  <div class="sec">Habilitations & formations — MDM 2026</div>
+  <div class="alert-a" style="margin-bottom:1rem">
+    <div class="at">Légende</div>
+    <div class="ab">
+      <span style="background:#E8F8F0;color:#1e8449;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;display:inline-block">✓ Valide</span>&nbsp;
+      <span style="background:#FDEEE9;color:#C23A10;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;display:inline-block">✗ Échu — à renouveler</span>&nbsp;
+      <span style="background:#FEF5E7;color:#7d5000;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;display:inline-block">⚠ À programmer</span>&nbsp;
+      <span style="background:#F2F2F2;color:#6B6B6B;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;display:inline-block">? Données absentes</span>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem">
+    <input id="habSearch" type="text" placeholder="Rechercher un collaborateur ou une formation..." 
+      style="flex:1;min-width:200px;font-size:12px;padding:8px 12px;border:1.5px solid var(--bd);border-radius:8px;font-family:inherit;outline:none"
+      oninput="filterHab()" onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--bd)'"/>
+    <select id="habFilter" onchange="filterHab()" style="font-size:12px;padding:8px 12px;border:1.5px solid var(--bd);border-radius:8px;font-family:inherit;background:var(--wh);color:var(--gr);outline:none">
+      <option value="all">Toutes les habilitations</option>
+      <option value="ok">✓ Valides uniquement</option>
+      <option value="expired">✗ Échues uniquement</option>
+      <option value="todo">⚠ À programmer</option>
+      <option value="absent">? Données absentes</option>
+    </select>
+  </div>
+
+  <div id="habList"></div>
+</div>
+
 
 <!-- ═══ PANEL : ACCUEIL & BADGES ═══ -->
 <div id="panel-accueil" class="panel">
@@ -569,17 +632,42 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
       <div class="res-s">Partagé le 24 mars · B. Lucien & B. Sorres · Google Forms</div>
       <span class="res-tag" style="background:var(--green-l);color:#1e8449">Google Forms</span>
     </a>
-    <a class="res-card" href="#" target="_blank">
-      <div class="res-icon" style="background:var(--or-l)"><span style="font-size:18px">🗂️</span></div>
-      <div class="res-t">Suivi objectifs SSE</div>
-      <div class="res-s">Formulaire objectifs SSE individuels et collectifs</div>
-      <span class="res-tag" style="background:var(--or-l);color:var(--or-d)">Google Forms</span>
+    <a class="res-card" href="https://mdm-my.sharepoint.com/:x:/g/personal/qhse3_mdm_re/IQAN4cFAjy4VSYc-3RExgTNFAbUA6sRSJpsqAggxEJNcefA?e=pHe1Ka" target="_blank">
+      <div class="res-icon" style="background:var(--or-l)"><span style="font-size:18px">📈</span></div>
+      <div class="res-t">KPI — Service QHSE</div>
+      <div class="res-s">Tableau de bord des indicateurs QHSE · SharePoint MDM</div>
+      <span class="res-tag" style="background:var(--or-l);color:var(--or-d)">SharePoint · Excel</span>
     </a>
-    <a class="res-card" href="#" target="_blank">
-      <div class="res-icon" style="background:#EBF5FB"><span style="font-size:18px">🔵</span></div>
-      <div class="res-t">Accueil MemoryFlow — Albioma</div>
-      <div class="res-s">Sites Albioma Le Gol · Contact : Mathilde Roger QSE</div>
-      <span class="res-tag" style="background:var(--blue-l);color:#1a5f7a">MemoryFlow</span>
+    <a class="res-card" href="https://www.inrs.fr" target="_blank">
+      <div class="res-icon" style="background:#EBF5FB"><span style="font-size:18px">🔬</span></div>
+      <div class="res-t">INRS — Institut National Recherche Sécurité</div>
+      <div class="res-s">Fiches pratiques, guides, outils prévention risques professionnels</div>
+      <span class="res-tag" style="background:var(--blue-l);color:#1a5f7a">INRS · Référence nationale</span>
+    </a>
+    <a class="res-card" href="https://www.inrs.fr/media.html?refINRS=ED%20840" target="_blank">
+      <div class="res-icon" style="background:#EBF5FB"><span style="font-size:18px">⚡</span></div>
+      <div class="res-t">INRS — Risques électriques</div>
+      <div class="res-s">Guide ED 840 · Habilitations, interventions, prévention</div>
+      <span class="res-tag" style="background:var(--blue-l);color:#1a5f7a">INRS · ED 840</span>
+    </a>
+    <a class="res-card" href="https://www.inrs.fr/risques/travaux-hauteur.html" target="_blank">
+      <div class="res-icon" style="background:#EBF5FB"><span style="font-size:18px">🏗️</span></div>
+      <div class="res-t">INRS — Travaux en hauteur</div>
+      <div class="res-s">Prévention chutes, équipements, réglementation</div>
+      <span class="res-tag" style="background:var(--blue-l);color:#1a5f7a">INRS · Hauteur</span>
+    </a>
+    <a class="res-card" href="https://www.inrs.fr/risques/atex.html" target="_blank">
+      <div class="res-icon" style="background:var(--or-l)"><span style="font-size:18px">🔥</span></div>
+      <div class="res-t">INRS — Atmosphères explosives (ATEX)</div>
+      <div class="res-s">Zones ATEX, équipements, prévention explosion</div>
+      <span class="res-tag" style="background:var(--or-l);color:var(--or-d)">INRS · ATEX</span>
+    </a>
+  </div>
+  <div class="sec" style="margin-top:.5rem">Documents réglementaires</div>
+  <div class="lk-list" style="margin-bottom:1.1rem">
+    <a class="lk-item" href="https://drive.google.com/file/d/1ux1hEfqWzvB2veGNoFFxpX7wnmfIcD_6/view?usp=drive_link" target="_blank">
+      <div class="lk-l"><div class="lk-dot" style="background:var(--or)"></div><div><div class="lk-t">DUERP — Document Unique d'Évaluation des Risques</div><div class="lk-s">Document réglementaire obligatoire · Google Drive MDM</div></div></div>
+      <div style="display:flex;align-items:center;gap:8px"><span class="pill pok">Disponible</span><span class="lk-arr">↗</span></div>
     </a>
   </div>
   <div class="sec" style="margin-top:.5rem">Brigade QHSE</div>
@@ -606,10 +694,19 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
   </div>
   <div class="sec">Partenaires QHSE / HSE / HSEQ</div>
   <div class="cg">
-    <div class="cc"><div class="cav" style="background:#16a085">MR</div><div class="cn">Mathilde Roger</div><div class="cr">QSE — Albioma Le Gol</div><div class="ce">Contact MemoryFlow · Saint-Louis</div></div>
-    <div class="cc"><div class="cav" style="background:#16a085">CI</div><div class="cn">Christophe Iglesias</div><div class="cr">HSE — Paprec</div><div class="ce">Partenaire Paprec</div></div>
-    <div class="cc"><div class="cav" style="background:#16a085">LH</div><div class="cn">Lucas Hoareau</div><div class="cr">HSE — Paprec</div><div class="ce">Partenaire Paprec</div></div>
-    <div class="cc"><div class="cav" style="background:#16a085">AC</div><div class="cn">Adrien Chanlap</div><div class="cr">QHSE — GP Innovation</div><div class="ce">adrien.chanlap@gp-innovation.re</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">MR</div><div class="cn">Mathilde Roger</div><div class="cr">QSE — Albioma</div><div class="ce"><a href="mailto:mathilde.roger@albioma.com" style="color:var(--or)">mathilde.roger@albioma.com</a><br>+262 692 66 30 29</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">AP</div><div class="cn">Aurore Poulain</div><div class="cr">QSE — Albioma</div><div class="ce"><a href="mailto:aurore.POULAIN@albioma.com" style="color:var(--or)">aurore.POULAIN@albioma.com</a><br>+262 692 91 18 13</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">SL</div><div class="cn">Sonia Leveneur</div><div class="cr">QSE — TotalEnergies</div><div class="ce"><a href="mailto:sonia.leveneur@totalenergies.com" style="color:var(--or)">sonia.leveneur@totalenergies.com</a></div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">KL</div><div class="cn">Karen Leriche</div><div class="cr">QSE — Cementis</div><div class="ce"><a href="mailto:karen.leriche@cementis.io" style="color:var(--or)">karen.leriche@cementis.io</a><br>+262 692 86 02 38</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">CI</div><div class="cn">Christophe Iglesias</div><div class="cr">QSE — Paprec</div><div class="ce"><a href="mailto:christophe.iglesias@paprec.com" style="color:var(--or)">christophe.iglesias@paprec.com</a><br>+33 663 36 72 65</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">LH</div><div class="cn">Lucas Hoareau</div><div class="cr">QSE — Paprec</div><div class="ce">+262 692 42 97 33</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">AG</div><div class="cn">Alexis Gaudin Rigaud</div><div class="cr">QSE — SPHB</div><div class="ce">+262 692 73 05 46</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">AJ</div><div class="cn">Amaury Junges</div><div class="cr">QSE</div><div class="ce">+262 693 45 48 27</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">CB</div><div class="cn">Camille Burg</div><div class="cr">QSE — CIMON</div><div class="ce">+262 693 51 82 80</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">EH</div><div class="cn">Evan Hoarau</div><div class="cr">QSE — STCI</div><div class="ce">+262 692 75 87 80</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">GP</div><div class="cn">Grosset Pierre</div><div class="cr">QSE — Fibres Industrie Bois</div><div class="ce">+262 692 59 94 52</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">LL</div><div class="cn">Léa Lebon</div><div class="cr">QSE — ErCane</div><div class="ce">+262 693 11 73 94</div></div>
+    <div class="cc"><div class="cav" style="background:#16a085">AC</div><div class="cn">Adrien Chanlap</div><div class="cr">QHSE — GP Innovation</div><div class="ce"><a href="mailto:adrien.chanlap@gp-innovation.re" style="color:var(--or)">adrien.chanlap@gp-innovation.re</a></div></div>
   </div>
 </div>
 
@@ -763,6 +860,98 @@ html,body{height:100%;font-family:'Segoe UI',system-ui,Arial,sans-serif;backgrou
   </div>
 </div>
 
+<!-- ═══ PANEL : CONDUITE À TENIR ═══ -->
+<div id="panel-conduite" class="panel">
+  <div class="sec">Conduite à tenir en cas d'accident</div>
+
+  <div class="alert-r" style="margin-bottom:1.1rem">
+    <div class="at">🚨 En cas d'urgence vitale — appelez le 15 (SAMU) ou le 18 (Pompiers)</div>
+    <div class="ab">Ne déplacez pas la victime sauf danger immédiat · Restez auprès d'elle jusqu'aux secours</div>
+  </div>
+
+  <!-- ACCIDENT CHANTIER -->
+  <div class="card" style="margin-bottom:1.1rem">
+    <div class="card-t" style="color:var(--or);font-size:14px">🦺 Accident sur chantier</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--red-l);border-radius:7px">
+        <div style="background:var(--or);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">1</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">PROTÉGER</div><div style="font-size:12px;color:var(--gr-l)">Sécuriser la zone · Baliser · Couper les énergies si nécessaire · Éloigner les tiers</div></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--amber-l);border-radius:7px">
+        <div style="background:var(--amber);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">2</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">ALERTER</div><div style="font-size:12px;color:var(--gr-l)">15 SAMU · 18 Pompiers · 112 Urgences · Prévenir le chargé de travaux + QHSE MDM</div></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--green-l);border-radius:7px">
+        <div style="background:var(--green);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">3</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">SECOURIR</div><div style="font-size:12px;color:var(--gr-l)">Gestes de premiers secours si formé · PLS si inconscient · Ne pas retirer le casque</div></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--blue-l);border-radius:7px">
+        <div style="background:var(--blue);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">4</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">DÉCLARER</div><div style="font-size:12px;color:var(--gr-l)">Remplir la remontée d'événement · Conserver les preuves · Ne pas modifier la scène</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.8rem;display:flex;gap:8px;flex-wrap:wrap">
+      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DXwSXK3ZZEqPVJuiFsneXIngvhAIK5JLnCQbkCPeo-JUNUpLWE02TUE3OUFVUlFUQ05XR1g1WklKNi4u" target="_blank" class="btn" style="margin-top:0;flex:1">🚨 Déclarer l'événement maintenant</a>
+    </div>
+  </div>
+
+  <!-- ACCIDENT ROUTIER -->
+  <div class="card" style="margin-bottom:1.1rem">
+    <div class="card-t" style="color:var(--blue);font-size:14px">🚗 Accident de la route</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--red-l);border-radius:7px">
+        <div style="background:var(--or);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">1</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">SÉCURISER</div><div style="font-size:12px;color:var(--gr-l)">Couper le moteur · Mettre le gilet · Poser le triangle · Ne pas fumer</div></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--amber-l);border-radius:7px">
+        <div style="background:var(--amber);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">2</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">ALERTER</div><div style="font-size:12px;color:var(--gr-l)">15 · 18 · 112 · Prévenir le responsable MDM (Boris Sorres : +262 692 87 20 07)</div></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--green-l);border-radius:7px">
+        <div style="background:var(--green);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">3</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">CONSTATER</div><div style="font-size:12px;color:var(--gr-l)">Remplir le constat à l'amiable · Photos des dommages · Témoins · Ne rien signer sous pression</div></div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:8px;background:var(--blue-l);border-radius:7px">
+        <div style="background:var(--blue);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">4</div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--gr)">DÉCLARER</div><div style="font-size:12px;color:var(--gr-l)">Remettre le constat à MDM sous 24h · Remplir la remontée d'événement · Prévenir RH</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.8rem;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <a href="https://drive.google.com/file/d/1k0Xg8sffBA-TX35WuC6hR7Fcw_cu4TJg/view?usp=drive_link" target="_blank" class="btn-g" style="margin-top:0;text-align:center;display:flex;align-items:center;justify-content:center">📄 Procédure constat</a>
+      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DXwSXK3ZZEqPVJuiFsneXIngvhAIK5JLnCQbkCPeo-JUNUpLWE02TUE3OUFVUlFUQ05XR1g1WklKNi4u" target="_blank" class="btn" style="margin-top:0;text-align:center;display:flex;align-items:center;justify-content:center">🚨 Déclarer l'événement</a>
+    </div>
+  </div>
+
+  <!-- CONTACTS URGENCE -->
+  <div class="sec">Numéros d'urgence</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:1.1rem">
+    <a href="tel:15" style="background:var(--red-l);border:1px solid var(--or);border-radius:8px;padding:10px;text-align:center;text-decoration:none">
+      <div style="font-size:22px;font-weight:900;color:var(--or)">15</div>
+      <div style="font-size:11px;color:var(--gr-l)">SAMU</div>
+    </a>
+    <a href="tel:18" style="background:var(--red-l);border:1px solid var(--or);border-radius:8px;padding:10px;text-align:center;text-decoration:none">
+      <div style="font-size:22px;font-weight:900;color:var(--or)">18</div>
+      <div style="font-size:11px;color:var(--gr-l)">Pompiers</div>
+    </a>
+    <a href="tel:112" style="background:var(--red-l);border:1px solid var(--or);border-radius:8px;padding:10px;text-align:center;text-decoration:none">
+      <div style="font-size:22px;font-weight:900;color:var(--or)">112</div>
+      <div style="font-size:11px;color:var(--gr-l)">Urgences EU</div>
+    </a>
+    <a href="tel:+262692872007" style="background:var(--gr-xl);border:1px solid var(--bd);border-radius:8px;padding:10px;text-align:center;text-decoration:none">
+      <div style="font-size:13px;font-weight:700;color:var(--gr)">Boris S.</div>
+      <div style="font-size:11px;color:var(--gr-l)">Co-gérant Tech.</div>
+    </a>
+    <a href="tel:+262693215898" style="background:var(--or-l);border:1px solid var(--or);border-radius:8px;padding:10px;text-align:center;text-decoration:none">
+      <div style="font-size:13px;font-weight:700;color:var(--or)">Loïc T.</div>
+      <div style="font-size:11px;color:var(--gr-l)">Resp. QSE</div>
+    </a>
+    <a href="tel:+262692356176" style="background:var(--or-l);border:1px solid var(--or);border-radius:8px;padding:10px;text-align:center;text-decoration:none">
+      <div style="font-size:13px;font-weight:700;color:var(--or)">Thomy C.</div>
+      <div style="font-size:11px;color:var(--gr-l)">Tech. QSE</div>
+    </a>
+  </div>
+</div>
+
 <!-- ═══ PANEL : ASSISTANT IA ═══ -->
 <div id="panel-assistant" class="panel">
   <div class="sec">Assistant QHSE MDM — propulsé par Claude AI (Anthropic)</div>
@@ -829,7 +1018,7 @@ function showPanel(id,btn){
   window.scrollTo(0,0);
 }
 function goAI(q){
-  showPanel('assistant',document.querySelectorAll('.nb')[7]);
+  showPanel('assistant',document.querySelectorAll('.nb')[10]);
   setTimeout(()=>{document.getElementById('chatInput').value=q;sendChat();},200);
 }
 
@@ -976,10 +1165,24 @@ function saveDone(){try{localStorage.setItem(doneKey,JSON.stringify(causerieDone
 
 function renderCauseries(){
   const el = document.getElementById('causerie-list');
+  const now = new Date(); now.setHours(0,0,0,0);
+  const currentYear = now.getFullYear();
+  // Map mois name to month index
+  const moisMap = {Octobre:9,Novembre:10,Décembre:11,Janvier:0,Février:1,Mars:2,Avril:3,Mai:4,Juin:5};
   el.innerHTML = CAUSERIES.map((m,mi)=>{
-    const isCurrentMonth = m.mois==='Avril';
-    const items = m.items.map((it,ii)=>{
-      const key = m.mois+'_'+ii;
+    const mIdx = moisMap[m.mois];
+    const mYear = (mIdx !== undefined && mIdx < 9) ? currentYear + 1 : currentYear;
+    // Filter items to only show future ones
+    const allItems = m.items;
+    const futureItems = allItems.filter((it,ii)=>{
+      const [day,month] = it.date.split('/').map(Number);
+      const itemDate = new Date(mYear, month-1, day); itemDate.setHours(0,0,0,0);
+      return itemDate >= now;
+    });
+    if(futureItems.length === 0) return '';
+    const isCurrentMonth = futureItems.length < allItems.length && futureItems.length > 0;
+    const items = futureItems.map((it,ii)=>{
+      const key = m.mois+'_'+allItems.indexOf(it);
       const isDone = causerieDone[key];
       return `<div class="causerie-item" id="ci_${mi}_${ii}">
         <span class="ci-date">${it.date}</span>
@@ -1011,33 +1214,43 @@ function toggleDone(mi,ii){
 }
 
 // ─── PLANNING SÉCURITÉ ───
-const PLANNING = [
-  {date:'28 avr.',mois:'Avril',txt:'Journée Mondiale de la Sécurité et Santé au Travail — OIT',type:'international',proche:true},
-  {date:'24 avr.',mois:'Avril',txt:'Journée Mondiale de la Sécurité MDM chez TotalEnergies — 10h-15h',type:'national',proche:true},
-  {date:'1 mai',mois:'Mai',txt:'Fête du Travail — journée de sensibilisation droits des travailleurs',type:'national'},
-  {date:'28 mai',mois:'Mai',txt:'Semaine pour la Qualité de Vie au Travail (QVT) — début',type:'national'},
-  {date:'5 juin',mois:'Juin',txt:'Journée Mondiale de l\'Environnement — ONU',type:'international'},
-  {date:'23 juin',mois:'Juin',txt:'Journée Mondiale des Réfugiés (mobilisation solidarité)',type:'international'},
-  {date:'1 juil.',mois:'Juillet',txt:'Mois de la prévention des risques professionnels (INRS)',type:'national'},
-  {date:'6 août',mois:'Août',txt:'Journée Mondiale de la Sécurité Nucléaire',type:'international'},
-  {date:'12 sept.',mois:'Septembre',txt:'Journée Nationale de la Prévention — France',type:'national'},
-  {date:'22 sept.',mois:'Septembre',txt:'Journée Sans Voiture — mobilité douce & sécurité routière',type:'national'},
-  {date:'Oct.',mois:'Octobre',txt:'Mois européen de la sécurité et santé au travail (EU-OSHA)',type:'international'},
-  {date:'10 oct.',mois:'Octobre',txt:'Journée Mondiale de la Santé Mentale — OMS',type:'international'},
-  {date:'Nov.',mois:'Novembre',txt:'Semaine de la QVT au travail — ANACT',type:'national'},
-  {date:'1 déc.',mois:'Décembre',txt:'Journée Mondiale contre le Sida (sensibilisation)',type:'international'},
+const PLANNING_ALL = [
+  {date:'28 avr.',mois:'Avril',txt:'Journée Mondiale de la Sécurité et Santé au Travail — OIT',type:'international',ts:new Date(2026,3,28)},
+  {date:'1 mai',mois:'Mai',txt:'Fête du Travail — journée de sensibilisation droits des travailleurs',type:'national',ts:new Date(2026,4,1)},
+  {date:'28 mai',mois:'Mai',txt:'Semaine pour la Qualité de Vie au Travail (QVT) — début',type:'national',ts:new Date(2026,4,28)},
+  {date:'5 juin',mois:'Juin',txt:"Journée Mondiale de l'Environnement — ONU",type:'international',ts:new Date(2026,5,5)},
+  {date:'23 juin',mois:'Juin',txt:'Journée Mondiale des Réfugiés (mobilisation solidarité)',type:'international',ts:new Date(2026,5,23)},
+  {date:'1 juil.',mois:'Juillet',txt:'Mois de la prévention des risques professionnels (INRS)',type:'national',ts:new Date(2026,6,1)},
+  {date:'6 août',mois:'Août',txt:'Journée Mondiale de la Sécurité Nucléaire',type:'international',ts:new Date(2026,7,6)},
+  {date:'12 sept.',mois:'Septembre',txt:'Journée Nationale de la Prévention — France',type:'national',ts:new Date(2026,8,12)},
+  {date:'22 sept.',mois:'Septembre',txt:'Journée Sans Voiture — mobilité douce & sécurité routière',type:'national',ts:new Date(2026,8,22)},
+  {date:'Oct.',mois:'Octobre',txt:'Mois européen de la sécurité et santé au travail (EU-OSHA)',type:'international',ts:new Date(2026,9,1)},
+  {date:'10 oct.',mois:'Octobre',txt:'Journée Mondiale de la Santé Mentale — OMS',type:'international',ts:new Date(2026,9,10)},
+  {date:'Nov.',mois:'Novembre',txt:'Semaine de la QVT au travail — ANACT',type:'national',ts:new Date(2026,10,1)},
+  {date:'1 déc.',mois:'Décembre',txt:'Journée Mondiale contre le Sida (sensibilisation)',type:'international',ts:new Date(2026,11,1)},
 ];
+// Filtrage automatique : on ne garde que les événements à venir (>= aujourd'hui)
+const todayTs = new Date(); todayTs.setHours(0,0,0,0);
+const PLANNING = PLANNING_ALL.filter(ev => ev.ts >= todayTs);
 
 function renderPlanning(){
   const el = document.getElementById('planning-list');
+  if(!el) return;
+  const now = new Date(); now.setHours(0,0,0,0);
   let lastMois='';
+  if(PLANNING.length===0){
+    el.innerHTML='<div style="text-align:center;color:var(--gr-l);padding:2rem">Aucun événement à venir pour cette année.</div>';
+    return;
+  }
   el.innerHTML = PLANNING.map(ev=>{
     let html='';
     if(ev.mois!==lastMois){
       html+=`<div class="sec" style="margin-top:${lastMois?'1rem':'0'}">${ev.mois} 2026</div>`;
       lastMois=ev.mois;
     }
-    return html+`<div class="cal-ev ${ev.type} ${ev.proche?'today':''}">
+    const isToday = ev.ts.getTime()===now.getTime();
+    const isSoon = (ev.ts-now)/(1000*60*60*24)<=7;
+    return html+`<div class="cal-ev ${ev.type} ${isToday||isSoon?'today':''}">
       <span class="ce-date">${ev.date}</span>
       <span class="ce-txt">${ev.txt}</span>
       <span class="ce-type ${ev.type==='national'?'ct-nat':'ct-int'}">${ev.type==='national'?'National':'International'}</span>
@@ -1065,11 +1278,11 @@ INDICATEURS AU 16 AVRIL 2026 :
 
 PLAN CAUSERIES "LE LUNDI SSE" :
 Octobre : bases culture sécurité | Novembre : bons comportements SSE | Décembre : risques mécaniques | Janvier : risques électriques | Février : travaux en hauteur | Mars : santé et conditions de travail | Avril : produits chimiques/environnement | Mai : sécurité sites clients | Juin : sécurité routière
-Causerie en cours (avril) : 20/04 – Tri et élimination des déchets industriels
+Causerie suivante (mai) : 04/05 – Préparer son intervention avec rigueur et anticipation
 
 POINTS CRITIQUES MASE 2024 :
 1. CRITIQUE — Remontées d'événements : 27j sans signalement = sous-déclaration = non-conformité axe 4 MASE
-2. CRITIQUE — Habilitation IZI Safety de Christophe Grassart expirée (TotalEnergies)
+2. CRITIQUE — Habilitations échues : Grassart (TH), Landon (TH), Vogt (TH), Metivier (Espace confiné), Telmon (Espace confiné, Garnitures méca), Say Liang Fat (ATEX, Garnitures méca), Lakane+Jeanne (SST), Calpetard (ATEX)
 3. À AMÉLIORER — Bulletins sécurité : 1 manquant pour atteindre l'objectif mensuel (3)
 4. À CONSOLIDER — Process accueil MemoryFlow Albioma (Mathilde Roger, QSE)
 
@@ -1122,7 +1335,7 @@ async function callClaude(q){
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({
-      model:"claude-sonnet-4-20250514",
+      model:"claude-3-5-sonnet-20241022",
       max_tokens:1000,
       system:MDM_CONTEXT,
       messages:[{role:"user",content:q}]
@@ -1160,6 +1373,53 @@ function sendChat(){
   processQ(q);
 }
 function askQ(q){processQ(q);}
+
+
+// ─── HABILITATIONS ───
+const HAB_DATA = [{"name": "BALEYA Brayan", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Formation 18/09/2025"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "ok", "d": "Formation 20/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Formation 20/04/2026"}, {"n": "Sécurité en piste", "s": "ok", "d": "Formation 14/04/2026"}, {"n": "Badge Rouge Aéroport", "s": "ok", "d": "Formation 13/04/2026"}]}, {"name": "CADERBY Julien", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 09/07/2027"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 12/07/2026"}, {"n": "ATEX", "s": "ok", "d": "Valide jusqu'au 09/08/2027"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 04/09/2027"}]}, {"name": "CALPETARD Ryan", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 27/08/2027"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "expired", "d": "Valide jusqu'au 10/08/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 05/12/2026"}, {"n": "Sécurité en piste", "s": "todo", "d": "Formation 26/04/2023 — à renouveler ?"}]}, {"name": "CARDO Thomy", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Formation 30/07/2025"}, {"n": "SST", "s": "ok", "d": "Formation 06/06/2025"}, {"n": "ATEX", "s": "ok", "d": "Formation 13/06/2025"}]}, {"name": "CARPY Teddy", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Formation 17/10/2025"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "ok", "d": "Formation 20/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Formation 06/08/2025"}]}, {"name": "DE LAUNAY Bruna", "habs": [{"n": "SST", "s": "ok", "d": "Formation 06/06/2025"}, {"n": "ATEX", "s": "ok", "d": "Formation 20/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Formation 06/08/2025"}]}, {"name": "FREDOUIL Steven", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 18/01/2029"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "ok", "d": "Formation 20/06/2025"}]}, {"name": "GENCE Thomas", "habs": [{"n": "SST", "s": "ok", "d": "Formation 06/06/2025"}, {"n": "ATEX", "s": "ok", "d": "Formation 20/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 06/08/2028"}]}, {"name": "GRASSART Christophe", "habs": [{"n": "Travail en hauteur", "s": "expired", "d": "Valide jusqu'au 13/04/2026"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 29/08/2026"}, {"n": "ATEX", "s": "ok", "d": "Formation 20/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 06/08/2028"}]}, {"name": "GRONDIN Pascal", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Formation 25/04/2025"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "ok", "d": "Valide jusqu'au 10/07/2026"}, {"n": "Espace confiné", "s": "ok", "d": "Formation 23/04/2026"}, {"n": "Sécurité en piste", "s": "ok", "d": "Formation 14/04/2026"}, {"n": "Badge Rouge Aéroport", "s": "ok", "d": "Formation 13/04/2026"}]}, {"name": "JEANNE Loïc", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Formation 01/02/2025"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "Habilitations électriques", "s": "todo", "d": "À programmer"}]}, {"name": "LAKANE Gil", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 05/02/2029"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "expired", "d": "Valide jusqu'au 05/07/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 04/09/2027"}, {"n": "Sécurité en piste", "s": "ok", "d": "Formation 14/04/2026"}, {"n": "Badge Rouge Aéroport", "s": "ok", "d": "Formation 13/04/2026"}]}, {"name": "LANDON Marc", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 23/04/2029"}, {"n": "SST", "s": "ok", "d": "Formation 06/06/2025"}, {"n": "ATEX", "s": "expired", "d": "Valide jusqu'au 10/08/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Formation 20/04/2026"}, {"n": "Sécurité en piste", "s": "ok", "d": "Formation 14/04/2026"}, {"n": "Badge Rouge Aéroport", "s": "ok", "d": "Formation 13/04/2026"}]}, {"name": "LE HONSEC Sébastien", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 13/08/2027"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 29/08/2026"}, {"n": "ATEX", "s": "todo", "d": "À programmer"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 04/09/2027"}]}, {"name": "LIN Fabien", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 18/01/2029"}, {"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "Espace confiné", "s": "ok", "d": "Formation 23/04/2026"}, {"n": "Sécurité en piste", "s": "ok", "d": "Formation 14/04/2026"}, {"n": "Badge Rouge Aéroport", "s": "ok", "d": "Formation 13/04/2026"}]}, {"name": "METIVIER François", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 21/03/2027"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 29/08/2026"}, {"n": "ATEX", "s": "expired", "d": "Valide jusqu'au 22/05/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Formation 20/04/2026"}, {"n": "Sécurité en piste", "s": "ok", "d": "Formation 14/04/2026"}, {"n": "Badge Rouge Aéroport", "s": "ok", "d": "Formation 13/04/2026"}]}, {"name": "PAYET Muriel", "habs": [{"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "todo", "d": "À programmer"}]}, {"name": "PAYET Ophélie", "habs": [{"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "todo", "d": "À programmer"}]}, {"name": "PAYET Rico", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 05/02/2029"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 28/08/2026"}, {"n": "ATEX", "s": "expired", "d": "Valide jusqu'au 22/05/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 05/12/2026"}, {"n": "CACES R489 CAT 3", "s": "expired", "d": "Valide jusqu'au 20/12/2025"}]}, {"name": "RANDRIANASOLO Armel", "habs": [{"n": "Données absentes", "s": "absent", "d": "Non renseigné"}]}, {"name": "SAUTRON Jean François", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Formation 25/04/2025"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 28/08/2026"}, {"n": "ATEX", "s": "ok", "d": "Formation 13/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 04/09/2027"}, {"n": "Sécurité en piste", "s": "ok", "d": "Formation 14/04/2026"}, {"n": "Badge Rouge Aéroport", "s": "ok", "d": "Formation 13/04/2026"}]}, {"name": "SAY LIANG FAT Olivier", "habs": [{"n": "SST", "s": "ok", "d": "Formation 06/06/2025"}, {"n": "ATEX", "s": "todo", "d": "À programmer"}, {"n": "Garnitures mécaniques", "s": "todo", "d": "À programmer"}]}, {"name": "TECHER Loïc", "habs": [{"n": "SST", "s": "ok", "d": "Valide jusqu'au 28/08/2026"}, {"n": "ATEX", "s": "ok", "d": "Formation 13/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 05/12/2026"}]}, {"name": "TELMON Gaëtan", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 21/03/2027"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 28/08/2026"}, {"n": "ATEX", "s": "todo", "d": "À programmer"}, {"n": "Espace confiné", "s": "todo", "d": "À programmer"}, {"n": "Garnitures mécaniques", "s": "todo", "d": "À programmer"}]}, {"name": "VOGT Yoan", "habs": [{"n": "Travail en hauteur", "s": "ok", "d": "Valide jusqu'au 23/04/2029"}, {"n": "SST", "s": "ok", "d": "Valide jusqu'au 28/08/2026"}, {"n": "ATEX", "s": "ok", "d": "Formation 13/06/2025"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 05/12/2026"}]}, {"name": "ZIMMERMANN Sylvain", "habs": [{"n": "SST", "s": "todo", "d": "À programmer"}, {"n": "ATEX", "s": "todo", "d": "À programmer"}, {"n": "Espace confiné", "s": "ok", "d": "Valide jusqu'au 05/12/2026"}]}];
+
+function filterHab(){
+  const search = document.getElementById('habSearch').value.toLowerCase();
+  const filter = document.getElementById('habFilter').value;
+  renderHab(search, filter);
+}
+
+function renderHab(search='', filter='all'){
+  const el = document.getElementById('habList');
+  if(!el) return;
+  let html = '';
+  HAB_DATA.forEach(p => {
+    const nameMatch = p.name.toLowerCase().includes(search);
+    const habs = p.habs.filter(h => {
+      const habMatch = h.n.toLowerCase().includes(search);
+      const statusMatch = filter === 'all' || h.s === filter;
+      return (nameMatch || habMatch) && statusMatch;
+    });
+    if(!nameMatch && habs.length === 0) return;
+    const displayHabs = nameMatch ? p.habs.filter(h => filter === 'all' || h.s === filter) : habs;
+    if(displayHabs.length === 0) return;
+    html += `<div class="card" style="margin-bottom:.8rem">
+      <div style="font-size:13px;font-weight:700;color:var(--gr);margin-bottom:.7rem;display:flex;align-items:center;gap:8px">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--or);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;flex-shrink:0">${p.name.split(' ').map(w=>w[0]).join('').slice(0,2)}</div>
+        ${p.name}
+        <span style="font-size:10px;color:var(--gr-l);font-weight:400;margin-left:4px">${displayHabs.length} habilitation${displayHabs.length>1?'s':''}</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px">
+        ${displayHabs.map(h => {
+          const bg = h.s==='ok'?'#E8F8F0':h.s==='expired'?'#FDEEE9':h.s==='todo'?'#FEF5E7':'#F2F2F2';
+          const color = h.s==='ok'?'#1e8449':h.s==='expired'?'#C23A10':h.s==='todo'?'#7d5000':'#6B6B6B';
+          const icon = h.s==='ok'?'✓':h.s==='expired'?'✗':h.s==='todo'?'⚠':'?';
+          return `<div style="background:${bg};border:1px solid ${color}22;border-radius:6px;padding:4px 8px;font-size:11px">
+            <span style="color:${color};font-weight:700">${icon} ${h.n}</span>
+            <span style="color:var(--gr-l);font-size:10px;display:block;margin-top:1px">${h.d}</span>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
+  });
+  el.innerHTML = html || '<div style="text-align:center;color:var(--gr-l);padding:2rem">Aucun résultat trouvé</div>';
+}
+renderHab();
 
 // PWA
 if('serviceWorker' in navigator){
